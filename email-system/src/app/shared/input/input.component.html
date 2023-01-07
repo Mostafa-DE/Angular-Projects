@@ -1,0 +1,8 @@
+<div class="field">
+  <label>{{label}}</label>
+  <input *ngIf="controlType === 'input'" type="{{type}}" [formControl]="control"/>
+  <textarea *ngIf="controlType === 'textarea'" [formControl]="control"></textarea>
+  <div *ngIf="showErrors()" class="ui pointing red basic label">
+    <p>{{errorMessage()}}</p>
+  </div>
+</div>

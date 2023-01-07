@@ -1,0 +1,13 @@
+<divider>Model Component</divider>
+<button (click)="onClickShowModal()">Show Modal</button>
+<app-modal (close)="onClickShowModal()" *ngIf="showModal">
+  <h4 modalTitle>Mostafa-DE</h4>
+  <div modalContent>
+    <p>Live Life You Love!</p>
+    <p>Love Life You Live!</p>
+  </div>
+  <button modalFooter class="ui button" (click)="onClickShowModal()">YES</button>
+</app-modal>
+
+<divider>Accordion Component</divider>
+<app-accordion [accordionData]="accordionData"></app-accordion>

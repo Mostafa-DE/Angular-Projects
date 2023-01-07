@@ -1,0 +1,48 @@
+<div class="main">
+  <div class="container">
+    <h1>Password Generator</h1>
+    <div class="containerForm">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="inputSection">
+          <label for="length">Length</label>
+          <input class="inputLength"
+                 id="length"
+                 type="number"
+                 placeholder="Please Enter a length..."
+                 name="length"
+                 [(ngModel)]="length"
+          />
+        </div>
+        <div class="inputSection">
+          <label for="letters">Use Letters</label>
+          <input id="letters"
+                 type="checkbox"
+                 [(ngModel)]="isLetters"
+                 name="letters"
+          />
+        </div>
+        <div class="inputSection">
+          <label for="numbers">Use Numbers</label>
+          <input id="numbers"
+                 type="checkbox"
+                 [(ngModel)]="isNumbers"
+                 name="numbers"
+          />
+        </div>
+        <div class="inputSection">
+          <label for="symbols">Use Symbols</label>
+          <input id="symbols"
+                 type="checkbox"
+                 name="symbols"
+                 [(ngModel)]="isSymbols"
+          />
+        </div>
+        <button class="btn" type="submit">Generate!!</button>
+      </form>
+    </div>
+    <div>
+      <h1 *ngIf="password !== ''">Your password is: {{password}}</h1>
+      <h1 *ngIf="password === ''">Select at least one box to see the results!!</h1>
+    </div>
+  </div>
+</div>

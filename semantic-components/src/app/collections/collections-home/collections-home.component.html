@@ -1,0 +1,16 @@
+<app-table [data]="data" [headers]="headers"></app-table>
+<app-tabs>
+  <a routerLink="./"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact: true}"
+     class="item"
+  >
+    Bio
+  </a>
+  <a routerLink="./companies" routerLinkActive="active" class="item">
+    Companies
+  </a>
+  <a routerLink="./partners" routerLinkActive="active" class="item">
+    Partners
+  </a>
+</app-tabs>

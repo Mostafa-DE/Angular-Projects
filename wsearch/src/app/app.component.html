@@ -1,0 +1,5 @@
+<div class="container">
+  <app-search-bar (submitted)="onTerm($event)"></app-search-bar>
+  <app-page-list *ngIf="data.length" [data]="data"></app-page-list>
+  <h1 class="h1-text">Enter A term to search on wikipedia site...</h1>
+</div>

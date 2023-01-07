@@ -1,0 +1,17 @@
+<div class="ui container">
+  <div class="ui secondary pointing menu">
+    <a routerLink="/" class="item">Angular Email</a>
+
+    <div class="right menu">
+      <ng-container *ngIf="isUserSignedIn$ | async">
+        <a routerLink="/inbox" class="ui item" routerLinkActive="active">Inbox</a>
+        <a routerLink="/logout" class="ui item" routerLinkActive="active">Logout</a>
+      </ng-container>
+      <ng-container *ngIf="!(isUserSignedIn$ | async)">
+        <a routerLink="/login" class="ui item" routerLinkActive="active">Login</a>
+        <a routerLink="/register" class="ui item" routerLinkActive="active">Register</a>
+      </ng-container>
+    </div>
+  </div>
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,7 @@
+<button (click)="showModel = true" class="ui button primary">Reply</button>
+
+<app-model *ngIf="showModel" (close)="showModel = false">
+  <div title>Reply</div>
+
+  <app-email-form [email]="email" (emailSubmit)="onSubmit($event)"></app-email-form>
+</app-model>

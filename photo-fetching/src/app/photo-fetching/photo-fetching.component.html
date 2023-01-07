@@ -1,0 +1,7 @@
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+  <div style="height: 500px; margin-bottom: 2rem">
+    <p *ngIf="loading">Loading...</p>
+    <img *ngIf="!loading" alt="random image" src="{{photo.urls.full}}" width="500" height="500"/>
+  </div>
+  <button (click)="getPhoto()">Generate new photo!!</button>
+</div>

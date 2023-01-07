@@ -1,0 +1,16 @@
+<divider>Table Component</divider>
+<table class="ui celled table">
+  <thead>
+  <tr>
+    <th *ngFor="let header of headers"> {{header.label}} </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data_obj of data">
+    <td *ngFor="let header of headers"
+        [ngClass]="{'negative': !data_obj[header.key], 'positive': data_obj[header.key] === true }">
+      {{data_obj[header.key] | yesno}}
+    </td>
+  </tr>
+  </tbody>
+</table>
